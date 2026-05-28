@@ -1,4 +1,6 @@
+import Link from "next/dist/client/link";
 import Image from "next/image";
+import NavBar from "../components/NavBar";
 
 const data = [
   {
@@ -16,7 +18,8 @@ const data = [
 ]
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex flex-col align-top max-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      {/* <NavBar /> */}
       <main>
         <h1>HELLO WORLD!</h1>
 
@@ -25,7 +28,6 @@ export default function Home() {
             <th>Nome</th>
             <th>Idade</th>
           </tr>
-          <tbody className="border-2 border-zinc-300 p-5 gap-x-5">
           {/* testando o tsx */}
           {
           data.map(element => (
@@ -35,8 +37,8 @@ export default function Home() {
             </tr>
           ))
           }
-          </tbody>
         </table>
+          <Link href="/sobre">Vá para o Sobre</Link>
       </main>
     </div>
   );
