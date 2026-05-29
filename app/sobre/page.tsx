@@ -1,5 +1,11 @@
 import NavBar from "@/components/NavBar";
 import Link from "next/dist/client/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sobre",
+  description: "Página sobre o site",
+};
 
 export default function About() {
   return (
